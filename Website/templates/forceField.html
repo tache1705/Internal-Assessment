@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="refresh" content="delay_time; URL=new_website_url" />
+    <meta charset="UTF-8">
+    <title>Force Field Analysis</title>
+</head>
+<h1><strong><u>Force Field Analysis Business Tool</u>-----------------------------------------------------------------------------------------------------------------------------------------------</strong></h1>
+<body>
+    <p>&nbsp</p>
+    <center>
+    <font size="+2">Input the requested values under: </font>
+    </center>
+    <br/>
+    {% if submitted %}
+<center>
+    Click here to see your Graph!
+    <br/>
+    <a href="/fieldanalysis">
+        <button>Here</button>
+    </a>
+
+</center>
+
+
+    {% else %}
+<center>
+    <form action="" method=POST>
+        {% csrf_token %}
+
+        {{ form.as_p }}
+
+        <input type="submit" value="Submit">
+    </form>
+</center>
+    {% endif %}
+</body>
+</html>
