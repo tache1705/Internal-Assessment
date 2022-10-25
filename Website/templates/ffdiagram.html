@@ -8,7 +8,11 @@
 
 {% block content %}
 
-{{ ff_diagram }}
+{% for ForceField in ff_diagram %}
+
+{{ ForceField.conLevel1 }}
+
+{% endfor %}
 
 
 {% endblock %}

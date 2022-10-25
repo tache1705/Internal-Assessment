@@ -35,15 +35,18 @@ class Decision(models.Model):
 class ForceField(models.Model):
     busName = models.TextField()
 
-    proLevel4 = models.TextField()
-    proLevel3 = models.TextField()
-    proLevel2 = models.TextField()
-    proLevel1 = models.TextField()
+    proLevel4 = models.TextField(blank=True)
+    proLevel3 = models.TextField(blank=True)
+    proLevel2 = models.TextField(blank=True)
+    proLevel1 = models.TextField(blank=True)
 
-    conLevel4 = models.TextField()
-    conLevel3 = models.TextField()
-    conLevel2 = models.TextField()
-    conLevel1 = models.TextField()
+    conLevel4 = models.TextField(blank=True)
+    conLevel3 = models.TextField(blank=True)
+    conLevel2 = models.TextField(blank=True)
+    conLevel1 = models.TextField(blank=True)
+
+    def __str__(self):
+        return self.busName
 
 
 class Graphing(models.Model):

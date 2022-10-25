@@ -52,7 +52,7 @@ def force_field(request):
             form.save()
             return HttpResponseRedirect("/ffdiagram")
     else:
-        form = GraphingForm
+        form = ForceFieldForm
         if "submitted" in request.GET:
             submitted = True
     return render(request, "forceField.html", {"form": form, "submitted": submitted})
@@ -61,7 +61,7 @@ def force_field(request):
 def ffdiagram(request):
     ff_diagram = ForceField.objects.all()
     return render(request, 'ffdiagram.html',
-                  {'force_field_diagram': ff_diagram})
+                  {'ff_diagram': ff_diagram})
 
 
 def graphing(request):
