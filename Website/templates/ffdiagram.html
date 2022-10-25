@@ -10,7 +10,28 @@
 
 {% for ForceField in ff_diagram %}
 
-{{ ForceField.conLevel1 }}
+
+<strong><font size="+1">Pros:</font></strong>
+<br>
+Level 4: {{ ForceField.proLevel4 }}
+<br>
+Level 3: {{ ForceField.proLevel3 }}
+<br>
+Level 2: {{ ForceField.proLevel2 }}
+<br>
+Level 1: {{ ForceField.proLevel1 }}
+<br>
+<br>
+<strong><font size="+1">Cons:</font></strong>
+<br>
+Level 4: {{ ForceField.conLevel4 }}
+<br>
+Level 3: {{ ForceField.conLevel3 }}
+<br>
+Level 2: {{ ForceField.conLevel2 }}
+<br>
+Level 1: {{ ForceField.conLevel1 }}
+
 
 {% endfor %}
 
