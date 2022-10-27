@@ -7,30 +7,168 @@
 <body>
 
 {% block content %}
-
 {% for ForceField in ff_diagram %}
 
 
 <strong><font size="+1">Pros:</font></strong>
 <br>
-Level 4: {{ ForceField.proLevel4 }}
+{% if ForceField.proNumber4 > 0 %}
+&nbsp &nbsp Level 4: {{ ForceField.proLevel4 }}
 <br>
-Level 3: {{ ForceField.proLevel3 }}
+{% endif %}
+{% if ForceField.proNumber3 > 0 %}
+&nbsp &nbsp Level 3: {{ ForceField.proLevel3 }}
 <br>
-Level 2: {{ ForceField.proLevel2 }}
+{% endif %}
+{% if ForceField.proNumber2 > 0 %}
+&nbsp &nbsp Level 2: {{ ForceField.proLevel2 }}
 <br>
-Level 1: {{ ForceField.proLevel1 }}
+{% endif %}
+{% if ForceField.proNumber1 > 0 %}
+&nbsp &nbsp Level 1: {{ ForceField.proLevel1 }}
 <br>
+{% endif %}
 <br>
 <strong><font size="+1">Cons:</font></strong>
 <br>
-Level 4: {{ ForceField.conLevel4 }}
+{% if ForceField.conNumber4 > 0 %}
+&nbsp &nbsp Level 4: {{ ForceField.conLevel4 }}
 <br>
-Level 3: {{ ForceField.conLevel3 }}
+{% endif %}
+{% if ForceField.conNumber3 > 0 %}
+&nbsp &nbsp Level 3: {{ ForceField.conLevel3 }}
 <br>
-Level 2: {{ ForceField.conLevel2 }}
+{% endif %}
+{% if ForceField.conNumber2 > 0 %}
+&nbsp &nbsp Level 2: {{ ForceField.conLevel2 }}
 <br>
-Level 1: {{ ForceField.conLevel1 }}
+{% endif %}
+{% if ForceField.conNumber1 > 0 %}
+&nbsp &nbsp Level 1: {{ ForceField.conLevel1 }}
+<br>
+{% endif %}
+
+<center>
+    {% if ForceField.proNumber4 == 1 %}
+    ------------>
+    <br>
+    {% endif %}
+    {% if ForceField.proNumber4 == 2 %}
+    ------------>
+    <br>
+    ------------>
+    <br>
+    {% endif %}
+    {% if ForceField.proNumber4 == 3 %}
+    ------------>
+    <br>
+    ------------>
+    <br>
+    ------------>
+    <br>
+    {% endif %}
+    {% if ForceField.proNumber4 == 4 %}
+    ------------>
+    <br>
+    ------------>
+    <br>
+    ------------>
+    <br>
+    ------------>
+    <br>
+    {% endif %}
+
+
+    {% if ForceField.proNumber3 == 1 %}
+    --------->
+    <br>
+    {% endif %}
+    {% if ForceField.proNumber3 == 2 %}
+    --------->
+    <br>
+    --------->
+    <br>
+    {% endif %}
+    {% if ForceField.proNumber3 == 3 %}
+    --------->
+    <br>
+    --------->
+    <br>
+    --------->
+    <br>
+    {% endif %}
+    {% if ForceField.proNumber3 == 4 %}
+    --------->
+    <br>
+    --------->
+    <br>
+    --------->
+    <br>
+    --------->
+    <br>
+    {% endif %}
+
+
+    {% if ForceField.proNumber2 == 1 %}
+    ------>
+    <br>
+    {% endif %}
+    {% if ForceField.proNumber2 == 2 %}
+    ------>
+    <br>
+    ------>
+    <br>
+    {% endif %}
+    {% if ForceField.proNumber2 == 3 %}
+    ------>
+    <br>
+    ------>
+    <br>
+    ------>
+    <br>
+    {% endif %}
+    {% if ForceField.proNumber2 == 4 %}
+    ------>
+    <br>
+    ------>
+    <br>
+    ------>
+    <br>
+    ------>
+    <br>
+    {% endif %}
+
+
+    {% if ForceField.proNumber1 == 1 %}
+    --->
+    <br>
+    {% endif %}
+    {% if ForceField.proNumber1 == 2 %}
+    --->
+    <br>
+    --->
+    <br>
+    {% endif %}
+    {% if ForceField.proNumber1 == 3 %}
+    --->
+    <br>
+    --->
+    <br>
+    --->
+    <br>
+    {% endif %}
+    {% if ForceField.proNumber1 == 4 %}
+    --->
+    <br>
+    --->
+    <br>
+    --->
+    <br>
+    --->
+    <br>
+    {% endif %}
+</center>
+
 
 
 {% endfor %}

@@ -35,11 +35,6 @@ class Decision(models.Model):
 class ForceField(models.Model):
     busName = models.TextField()
 
-    arrow4 = "---->"
-    arrow3 = "--->"
-    arrow2 = "-->"
-    arrow1 = "->"
-
     proLevel4 = models.TextField(blank=True)
     proNumber4 = models.IntegerField(blank=True, default=0)
     proLevel3 = models.TextField(blank=True)
