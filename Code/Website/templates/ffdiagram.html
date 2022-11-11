@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FF Diagram</title>
+</head>
+<body>
+
+{% block content %}
+{% for ForceField in ff_diagram %}
+
+
+<strong><font size="+1">Pros:</font></strong>
+<br>
+{% if ForceField.proNumber4 > 0 %}
+&nbsp &nbsp Level 4: {{ ForceField.proLevel4 }}
+<br>
+{% endif %}
+{% if ForceField.proNumber3 > 0 %}
+&nbsp &nbsp Level 3: {{ ForceField.proLevel3 }}
+<br>
+{% endif %}
+{% if ForceField.proNumber2 > 0 %}
+&nbsp &nbsp Level 2: {{ ForceField.proLevel2 }}
+<br>
+{% endif %}
+{% if ForceField.proNumber1 > 0 %}
+&nbsp &nbsp Level 1: {{ ForceField.proLevel1 }}
+<br>
+{% endif %}
+<br>
+<strong><font size="+1">Cons:</font></strong>
+<br>
+{% if ForceField.conNumber4 > 0 %}
+&nbsp &nbsp Level 4: {{ ForceField.conLevel4 }}
+<br>
+{% endif %}
+{% if ForceField.conNumber3 > 0 %}
+&nbsp &nbsp Level 3: {{ ForceField.conLevel3 }}
+<br>
+{% endif %}
+{% if ForceField.conNumber2 > 0 %}
+&nbsp &nbsp Level 2: {{ ForceField.conLevel2 }}
+<br>
+{% endif %}
+{% if ForceField.conNumber1 > 0 %}
+&nbsp &nbsp Level 1: {{ ForceField.conLevel1 }}
+<br>
+{% endif %}
+
+<center style="display: flex">
+    {% if ForceField.proNumber4 == 1 %}
+    ------------>
+    <br>
+    {% endif %}
+    {% if ForceField.proNumber4 == 2 %}
+    ------------>
+    <br>
+    ------------>
+    <br>
+    {% endif %}
+    {% if ForceField.proNumber4 == 3 %}
+    ------------>
+    <br>
+    ------------>
+    <br>
+    ------------>
+    <br>
+    {% endif %}
+    {% if ForceField.proNumber4 == 4 %}
+    ------------>
+    <br>
+    ------------>
+    <br>
+    ------------>
+    <br>
+    ------------>
+    <br>
+    {% endif %}
+
+
+    {% if ForceField.proNumber3 == 1 %}
+    &nbsp &nbsp --------->
+    <br>
+    {% endif %}
+    {% if ForceField.proNumber3 == 2 %}
+    &nbsp &nbsp --------->
+    <br>
+    &nbsp &nbsp --------->
+    <br>
+    {% endif %}
+    {% if ForceField.proNumber3 == 3 %}
+    &nbsp &nbsp --------->
+    <br>
+    &nbsp &nbsp --------->
+    <br>
+    &nbsp &nbsp --------->
+    <br>
+    {% endif %}
+    {% if ForceField.proNumber3 == 4 %}
+    &nbsp &nbsp --------->
+    <br>
+    &nbsp &nbsp --------->
+    <br>
+    &nbsp &nbsp --------->
+    <br>
+    &nbsp &nbsp --------->
+    <br>
+    {% endif %}
+
+
+    {% if ForceField.proNumber2 == 1 %}
+    &nbsp &nbsp &nbsp &nbsp ------>
+    <br>
+    {% endif %}
+    {% if ForceField.proNumber2 == 2 %}
+    &nbsp &nbsp &nbsp &nbsp ------>
+    <br>
+    &nbsp &nbsp &nbsp &nbsp ------>
+    <br>
+    {% endif %}
+    {% if ForceField.proNumber2 == 3 %}
+    &nbsp &nbsp &nbsp &nbsp ------>
+    <br>
+    &nbsp &nbsp &nbsp &nbsp ------>
+    <br>
+    &nbsp &nbsp &nbsp &nbsp ------>
+    <br>
+    {% endif %}
+    {% if ForceField.proNumber2 == 4 %}
+    &nbsp &nbsp &nbsp &nbsp ------>
+    <br>
+    &nbsp &nbsp &nbsp &nbsp ------>
+    <br>
+    &nbsp &nbsp &nbsp &nbsp ------>
+    <br>
+    &nbsp &nbsp &nbsp &nbsp ------>
+    <br>
+    {% endif %}
+
+
+    {% if ForceField.proNumber1 == 1 %}
+    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp --->
+    <br>
+    {% endif %}
+    {% if ForceField.proNumber1 == 2 %}
+    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp --->
+    <br>
+    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp --->
+    <br>
+    {% endif %}
+    {% if ForceField.proNumber1 == 3 %}
+    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp --->
+    <br>
+    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp --->
+    <br>
+    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp --->
+    <br>
+    {% endif %}
+    {% if ForceField.proNumber1 == 4 %}
+    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp --->
+    <br>
+    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp --->
+    <br>
+    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp --->
+    <br>
+    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp --->
+    {% endif %}
+
+    <svg width="100" height="210" style="margin-left: 10px">
+        <rect width="100" height="200" style="fill:rgb(0,223,173);stroke-width:3;stroke:rgb(0,0,0)" />
+        <text x="1.5" y="105" font-family="Verdana" font-size="23" fill="blue">Decision</text>
+
+    </svg>
+
+
+<!-- This will be the CONS part for arrows -->
+
+
+
+    {% if ForceField.conNumber4 == 1 %}
+    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <------------
+    {% endif %}
+    <br>
+    {% if ForceField.conNumber4 == 2 %}
+    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <------------
+    <br>
+    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <------------
+    <br>
+    {% endif %}
+    {% if ForceField.conNumber4 == 3 %}
+    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <------------
+    <br>
+    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <------------
+    <br>
+    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <------------
+    <br>
+    {% endif %}
+    {% if ForceField.conNumber4 == 4 %}
+    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <------------
+    <br>
+    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <------------
+    <br>
+    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <------------
+    <br>
+    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <------------
+    <br>
+    {% endif %}
+
+
+    {% if ForceField.conNumber3 == 1 %}
+    &nbsp &nbsp &nbsp &nbsp <---------
+    <br>
+    {% endif %}
+    {% if ForceField.conNumber3 == 2 %}
+    &nbsp &nbsp &nbsp &nbsp <---------
+    <br>
+    &nbsp &nbsp &nbsp &nbsp <---------
+    <br>
+    {% endif %}
+    {% if ForceField.conNumber3 == 3 %}
+    &nbsp &nbsp &nbsp &nbsp <---------
+    <br>
+    &nbsp &nbsp &nbsp &nbsp <---------
+    <br>
+    &nbsp &nbsp &nbsp &nbsp <---------
+    <br>
+    {% endif %}
+    {% if ForceField.conNumber3 == 4 %}
+    &nbsp &nbsp &nbsp &nbsp <---------
+    <br>
+    &nbsp &nbsp &nbsp &nbsp <---------
+    <br>
+    &nbsp &nbsp &nbsp &nbsp <---------
+    <br>
+    &nbsp &nbsp &nbsp &nbsp <---------
+    <br>
+    {% endif %}
+
+
+
+    {% if ForceField.conNumber2 == 1 %}
+    &nbsp &nbsp <------
+    <br>
+    {% endif %}
+    {% if ForceField.conNumber2 == 2 %}
+    &nbsp &nbsp <------
+    <br>
+    &nbsp &nbsp <------
+    <br>
+    {% endif %}
+    {% if ForceField.conNumber2 == 3 %}
+    &nbsp &nbsp <------
+    <br>
+    &nbsp &nbsp <------
+    <br>
+    &nbsp &nbsp <------
+    <br>
+    {% endif %}
+    {% if ForceField.conNumber2 == 4 %}
+    &nbsp &nbsp <------
+    <br>
+    &nbsp &nbsp <------
+    <br>
+    &nbsp &nbsp <------
+    <br>
+    &nbsp &nbsp <------
+    <br>
+    {% endif %}
+
+
+
+    {% if ForceField.conNumber1 == 1 %}
+    <---
+    <br>
+    {% endif %}
+    {% if ForceField.conNumber1 == 2 %}
+    <---
+    <br>
+    <---
+    <br>
+    {% endif %}
+    {% if ForceField.conNumber1 == 3 %}
+    <---
+    <br>
+    <---
+    <br>
+    <---
+    <br>
+    {% endif %}
+    {% if ForceField.conNumber1 == 4 %}
+    <---
+    <br>
+    <---
+    <br>
+    <---
+    <br>
+    <---
+    <br>
+    {% endif %}
+</center>
+
+
+{% endfor %}
+
+
+{% endblock %}
+
+</body>
+</html>
