@@ -15,13 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from frontPage.views import home_view
+from frontPage.views import home_view, cover_page
 from busTools.views import break_even, decision_tree, force_field, graphing, ffdiagram, graphdiagram, begraph, treediagram
 
 
-
 urlpatterns = [
-    path("", home_view, name="Home Page"),
+    path("", cover_page, name="Cover Page"),
+    path("home/", home_view, name="Home Page"),
     path('admin/', admin.site.urls),
     path('breakeven/', break_even, name="Break-even"),
     path('begraph/', begraph, name="Break-even Graph"),
